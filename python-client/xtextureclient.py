@@ -8,7 +8,7 @@ import sys
 from PIL import Image
 
 #Put your HOSTs IP here
-HOST = "192.168.15.75"
+HOST = ""
 TCP_PORT = 52500
 
 #"Internal" stuff
@@ -245,10 +245,10 @@ def Main():
                     #_image = _image.resize((800,480))
                     imp = pilImageToSurface(_image)
                     screen.blit(imp, screenPos[x])
-                    # DEBUG: Show rendering Framerate
-                    fps = str(int(clock.get_fps()))
-                    fps_t = font.render(fps , 1, pygame.Color("RED"))
-                    screen.blit(fps_t,(0,0))
+                    # DEBUG: Show rendering Framerate - uncomment 3 lines below
+                    #fps = str(int(clock.get_fps()))
+                    #fps_t = font.render(fps , 1, pygame.Color("RED"))
+                    #screen.blit(fps_t,(0,0))
 
                 except Exception as e:
                     print(f"Failed to show  image - {e}")
